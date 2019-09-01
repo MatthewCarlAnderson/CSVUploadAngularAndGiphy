@@ -1,0 +1,16 @@
+<table class="table table-striped">
+  <thead>
+    <td>Email</td>
+    <td>First Name</td>
+    <td>LastName</td>
+  </thead>
+  <tr *ngFor="let person of people">
+    <td>{{person.email}}</td>
+    <td>{{person.firstName}}</td>
+    <td>{{person.lastName}}</td>
+
+  </tr>
+</table>
+<hr/>
+<p> Raw Json Data</p>
+{{people | json}}
