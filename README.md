@@ -42,7 +42,6 @@ This project is not licensed.
 * Postman
 
 ## Wishlist for next version
-* Much better database - This version is a single table. In future I would break out the interests into their own table (probably). I also cheated on the address there is no city state or zip
 * Strip out the values controller, repository and model classes
 
  
