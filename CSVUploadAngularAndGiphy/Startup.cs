@@ -69,8 +69,8 @@ namespace CSVUploadAngularAndGiphy
                     spa.UseAngularCliServer(npmScript: "start");
                 }
             });
-            DataInitializer dataInitializer = new DataInitializer();
-            dataInitializer.SeedData(context);
+            //DataInitializer dataInitializer = new DataInitializer();
+            //dataInitializer.SeedData(context);
         }
     }
 }

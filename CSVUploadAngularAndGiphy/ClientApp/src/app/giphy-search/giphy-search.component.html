@@ -1,5 +1,10 @@
 <p>
   <input [(ngModel)]="searchText"/> <button (click)="getGiphy()">Search for Giphy</button>
 </p>
-<img src="{{imageURL}}">
+<p *ngIf="imageURL === EMPTYIMAGE">
+  No Image found.
+</p>
+<div *ngIf="imageURL !== EMPTYIMAGE">
+  <img src="{{imageURL}}">
+</div>
 

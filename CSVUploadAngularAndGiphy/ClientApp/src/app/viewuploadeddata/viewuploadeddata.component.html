@@ -1,16 +1,25 @@
-<table class="table table-striped">
+<div class="card" *ngIf="people.length === 0">
+  <img class="vud-image" src="./assets/missing.jpg" alt="Missing" width="100pxs">
+  <div class="card-body">
+    <p class="card-text">There are no people yet. Go upload some.</p>
+    <a routerLink="/csv-upload" class="btn btn-primary">Go to CSV Upload</a>
+  </div>
+</div>
+<table class="table table-striped" *ngIf ="people.length > 0">
   <thead>
-    <td>Email</td>
-    <td>First Name</td>
-    <td>LastName</td>
+    <tr>
+      <td>Email</td>
+      <td>First Name</td>
+      <td>LastName</td>
+    </tr>
   </thead>
   <tr *ngFor="let person of people">
     <td>{{person.email}}</td>
     <td>{{person.firstName}}</td>
     <td>{{person.lastName}}</td>
-
   </tr>
 </table>
-<hr/>
+
+<hr />
 <p> Raw Json Data</p>
 {{people | json}}
